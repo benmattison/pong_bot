@@ -16,7 +16,7 @@ while not myDisplay.isDone():
 			coords = face.coordinates()-(70,0)
 			boxStart = face.coordinates()-(100,100)
 			boxEnd = face.coordinates()+(100,100)
-			myDrawingLayer.rectange(boxStart,boxEnd)
+			myDrawingLayer.rectangle(boxStart,boxEnd,filled=False)
 			myDrawingLayer.text("I SEE YOU",coords,color=Color.WHITE)
 			frame.addDrawingLayer(myDrawingLayer)
 			frame.applyLayers()
