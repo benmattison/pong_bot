@@ -20,5 +20,5 @@ while not myDisplay.isDone():
 	else:
 		print "No faces detected"
 	frame.save(myDisplay)
-	sleep(0.5)
+	sleep(0.1)
 
