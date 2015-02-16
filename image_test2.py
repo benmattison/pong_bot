@@ -1,4 +1,4 @@
-from SimpleCV import Image, Display
+from SimpleCV import Image, Display, DrawingLayer, Color
 from time import sleep
 
 myDisplay = Display()
