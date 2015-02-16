@@ -14,7 +14,7 @@ while not myDisplay.isDone():
 		for face in faces:
 			print "Face at: " + str(face.coordinates())
 			coords = face.coordinates()-(70,0)
-			myDrawingLayer.text("FACE",coords,color=Color.WHITE)
+			myDrawingLayer.text("I SEE YOU",coords,color=Color.WHITE)
 			frame.addDrawingLayer(myDrawingLayer)
 			frame.applyLayers()
 	else:
