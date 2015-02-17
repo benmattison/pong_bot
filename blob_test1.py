@@ -8,7 +8,7 @@ myDisplay = Display(resolution=(320, 240))
 while not myDisplay.isDone():
 	green_stuff = myCamera.getImage().colorDistance(Color.RED)
 
-	green_blobs = green_channel.findBlobs()
+	green_blobs = green_stuff.findBlobs()
 	#blobs are returned in order of area, smallest first
 
 	print "largest red blob at " + str(green_blobs[-1].x) + ", " + str( green_blobs[-1].y)
