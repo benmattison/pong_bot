@@ -14,6 +14,6 @@ while not myDisplay.isDone():
 	print "largest red blob at " + str(green_blobs[-1].x) + ", " + str( green_blobs[-1].y)
 
 
-	frame.save(myDisplay)
+	green_stuff.save(myDisplay)
 	sleep(0.1)
 
