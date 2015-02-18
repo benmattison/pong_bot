@@ -1,7 +1,7 @@
 from SimpleCV import Camera, Display, Image, Display, DrawingLayer, Color, ColorModel
 from time import sleep
 
-myCamera = Camera(prop_set={'width' : 320, 'height' : 240})
+myCamera = Camera(prop_set={'width' : 640, 'height' : 480})
 #redImage = Image("red.jpg")
 #redCrop = redImage.crop(0,0,320,240)
 
