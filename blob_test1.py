@@ -8,7 +8,7 @@ myDisplay = Display(resolution=(320, 240))
 while not myDisplay.isDone():
 	frame = myCamera.getImage()
 
-	cup = frame.findBlobs(threshval=(50,240,240))
+	cup = frame.findBlobs()
 	cup.draw()
 	#blobs are returned in order of area, smallest first
 
