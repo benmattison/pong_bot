@@ -10,7 +10,7 @@ myDisplay = Display(resolution=(320, 240))
 while not myDisplay.isDone():
 	frame = myCamera.getImage()
 	cm = ColorModel()
-	cm.add(color.RED)
+	cm.add(Color.RED)
 
 	cup = cm.threshold(frame)
 
