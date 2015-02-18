@@ -23,7 +23,7 @@ while not myDisplay.isDone():
 
 
 	#blobs are returned in order of area, smallest first
-	#print(cup)
+	print(blobs)
 
 	#myDrawingLayer = DrawingLayer((frame.width,frame.height))
 	#myDrawingLayer.sprite(cup)
