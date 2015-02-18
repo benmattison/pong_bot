@@ -12,8 +12,7 @@ while not myDisplay.isDone():
 	cup.draw()
 	#blobs are returned in order of area, smallest first
 
-	print "largest red blob at " + str(cup[-1].x) + ", " + str(cup[-1].y)
-
+	print(cup)
 
 	frame.save(myDisplay)
 	sleep(0.1)
