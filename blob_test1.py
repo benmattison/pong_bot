@@ -15,5 +15,5 @@ while not myDisplay.isDone():
 	print(cup)
 
 	frame.save(myDisplay)
-	sleep(0.1)
+	sleep(5)
 
