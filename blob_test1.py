@@ -15,10 +15,10 @@ while not myDisplay.isDone():
 	cup = cm.threshold(frame)
 
 	#cup = frame.findBlobs()
-	cup.show()
+	cup.draw()
 	#blobs are returned in order of area, smallest first
 	#print(cup)
 
-	#frame.save(myDisplay)
+	frame.save(myDisplay)
 	sleep(5)
 
