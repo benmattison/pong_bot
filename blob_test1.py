@@ -16,9 +16,9 @@ while not myDisplay.isDone():
 
 	blobs = frame.findBlobs()
 
-	cups = blobs.filter([b.isRectangle(0.5) for b in blobs])
+	#cups = blobs.filter([b.isRectangle(0.5) for b in blobs])
 
-	for b in cups:
+	for b in blobs:
 		b.drawRect()
 
 
