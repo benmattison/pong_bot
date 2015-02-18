@@ -5,7 +5,7 @@ myCamera = Camera(prop_set={'width' : 320, 'height' : 240})
 #redImage = Image("red.jpg")
 #redCrop = redImage.crop(0,0,320,240)
 
-myDisplay = Display(resolution=(320, 240))
+myDisplay = Display(resolution=(640, 480))
 
 while not myDisplay.isDone():
 	frame = myCamera.getImage().colorDistance(Color.RED)
