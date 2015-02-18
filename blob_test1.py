@@ -20,7 +20,7 @@ while not myDisplay.isDone():
 	#cups = blobs.filter([b.isRectangle(0.5) for b in blobs])
 
 	for b in blobs:
-		b.drawOutline()
+		b.drawOutline(color=Color.RED)
 
 
 	#blobs are returned in order of area, smallest first
