@@ -15,7 +15,7 @@ while not myDisplay.isDone():
 	#cm.add(Color.BLACK)
 	#cup = cm.threshold(frame)
 
-	blobs = negative.findBlobs(threshval=(240,240,240),minsize=10)
+	blobs = negative.findBlobs(threshval=(210,210,210),minsize=10)
 
 	#cups = blobs.filter([b.isRectangle(0.5) for b in blobs])
 
