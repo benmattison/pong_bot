@@ -17,7 +17,7 @@ while not myDisplay.isDone():
 
 	blobs = negative.findBlobs(threshval=(210,210,210),minsize=10)
 
-	height = blobs[-1].height
+	height = blobs[-1].height()
 
 	#cups = blobs.filter([b.isRectangle(0.5) for b in blobs])
 
