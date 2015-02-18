@@ -9,12 +9,13 @@ myDisplay = Display(resolution=(320, 240))
 
 while not myDisplay.isDone():
 	frame = myCamera.getImage().colorDistance(Color.RED)
+	negative = frame.colorDistance(Color.WHITE)
 
 	#cm = ColorModel()
 	#cm.add(Color.BLACK)
 	#cup = cm.threshold(frame)
 
-	blobs = frame.findBlobs()
+	blobs = negative.findBlobs()
 
 	#cups = blobs.filter([b.isRectangle(0.5) for b in blobs])
 
@@ -30,6 +31,6 @@ while not myDisplay.isDone():
 	#frame.addDrawingLayer(myDrawingLayer)
 	#frame.applyLayers()
 	
-	frame.save(myDisplay)
+	negative.save(myDisplay)
 	sleep(5)
 
