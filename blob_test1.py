@@ -14,7 +14,14 @@ while not myDisplay.isDone():
 	#cm.add(Color.BLACK)
 	#cup = cm.threshold(frame)
 
-	cup = frame.findBlobs()
+	blobs = frame.findBlobs()
+
+	cups = blobs.filter([b.isRectangle(0.5) for b in blobs])
+
+	for b in cups:
+		b.drawRect()
+
+
 	#blobs are returned in order of area, smallest first
 	#print(cup)
 
