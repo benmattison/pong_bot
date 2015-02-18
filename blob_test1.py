@@ -8,20 +8,20 @@ myCamera = Camera(prop_set={'width' : 320, 'height' : 240})
 myDisplay = Display(resolution=(320, 240))
 
 while not myDisplay.isDone():
-	frame = myCamera.getImage()
-	myDrawingLayer = DrawingLayer((frame.width,frame.height))
-	cm = ColorModel()
-	cm.add(Color.RED)
+	frame = myCamera.getImage().colorDistance(Color.RED)
 
-	cup = cm.threshold(frame)
+	#cm = ColorModel()
+	#cm.add(Color.BLACK)
+	#cup = cm.threshold(frame)
 
-	#cup = frame.findBlobs()
+	cup = frame.findBlobs()
 	#blobs are returned in order of area, smallest first
 	#print(cup)
 
-	myDrawingLayer.sprite(cup)
-	frame.addDrawingLayer(myDrawingLayer)
-	frame.applyLayers()
+	#myDrawingLayer = DrawingLayer((frame.width,frame.height))
+	#myDrawingLayer.sprite(cup)
+	#frame.addDrawingLayer(myDrawingLayer)
+	#frame.applyLayers()
 	
 	frame.save(myDisplay)
 	sleep(5)
