@@ -1,11 +1,11 @@
 from SimpleCV import Camera, Display, Image, Display, DrawingLayer, Color, ColorModel
 from time import sleep
 
-myCamera = Camera(prop_set={'width' : 640, 'height' : 480})
+myCamera = Camera(prop_set={'width' : 960, 'height' : 720})
 #redImage = Image("red.jpg")
 #redCrop = redImage.crop(0,0,320,240)
 
-myDisplay = Display(resolution=(640, 480))
+myDisplay = Display(resolution=(960, 720))
 
 while not myDisplay.isDone():
 	frame = myCamera.getImage().colorDistance(Color.RED)
