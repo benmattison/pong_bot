@@ -24,9 +24,11 @@ while not myDisplay.isDone():
 	for b in blobs:
 		b.drawOutline(color=Color.RED)
 
+	distance = 9249/height
 
 	#blobs are returned in order of area, smallest first
 	print "max height is " + str(height)
+	print "distance to target is " + str(distance) + "cm"
 
 	#myDrawingLayer = DrawingLayer((frame.width,frame.height))
 	#myDrawingLayer.sprite(cup)
