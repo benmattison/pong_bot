@@ -9,7 +9,7 @@ def convertAngle( angle ):
 myCamera = Camera(prop_set={'width' : 640, 'height' : 480})
 delay = 5 # in s
 angle = 0 # in degrees
-launchSpeed = 2 # in m/s
+launchSpeed = 5 # in m/s
 g = 9.81 # in m/s^2
 h = 0.12 # in m
 
@@ -27,7 +27,7 @@ while True:
 	distance = 0.01*9249/height # in m
 
 	print "max height is " + str(height) + " pixels"
-	print "distance to target is " + str(distance) + "cm"
+	print "distance to target is " + str(distance) + "m"
 
 	d2 = math.pow(distance,2)
 	v2 = math.pow(launchSpeed,2)
