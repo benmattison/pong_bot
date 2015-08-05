@@ -32,15 +32,15 @@ while True:
 	d2 = math.pow(distance,2)
 	v2 = math.pow(launchSpeed,2)
 
-	desc = d2 - 4*g*d2*(h+g*d2/(2*v2))/(2*v2)  / (g*d2/v2)
+	desc = d2 - 4*g*d2*(h+g*d2/(2*v2))/(2*v2)
 
 	if desc < 0:
 		angle = 0
 	else:
-		angle = 180/math.pi * math.atan( distance + math.sqrt( desc ) )
+		angle = 180/math.pi * math.atan( (distance + math.sqrt( desc ))/(g*d2/v2) )
 
 	if angle > 89:
-		angle = 180/math.pi * math.atan( distance - math.sqrt( desc ) )
+		angle = 180/math.pi * math.atan( (distance - math.sqrt( desc ))/(g*d2/v2) )
 
 
 	print "optimal angle is " + str(angle) + " degrees"
