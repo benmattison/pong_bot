@@ -32,7 +32,7 @@ while True:
 	d2 = math.pow(distance,2)
 	v2 = math.pow(launchSpeed,2)
 
-	desc = d2 - 4*g*d2*(h+g*d2/(2*v2))/(2*v2) ) / (g*d2/v2)
+	desc = d2 - 4*g*d2*(h+g*d2/(2*v2))/(2*v2)  / (g*d2/v2)
 
 	if desc < 0:
 		angle = 0
