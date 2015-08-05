@@ -7,11 +7,11 @@ def convertAngle( angle ):
 	return angle*200/180 + 50
 
 myCamera = Camera(prop_set={'width' : 640, 'height' : 480})
-delay = 5 # s
-angle = 0 # degrees
-launchSpeed = 2 # m/s
-g = 9.81 # m/s^2
-h = 12 # cm
+delay = 5 # in s
+angle = 0 # in degrees
+launchSpeed = 2 # in m/s
+g = 9.81 # in m/s^2
+h = 0.12 # in m
 
 while True:
 	frame = myCamera.getImage().colorDistance(Color.RED)
@@ -24,7 +24,7 @@ while True:
 	for b in blobs:
 		b.drawOutline(color=Color.RED)
 
-	distance = 9249/height
+	distance = 0.01*9249/height # in m
 
 	print "max height is " + str(height) + " pixels"
 	print "distance to target is " + str(distance) + "cm"
