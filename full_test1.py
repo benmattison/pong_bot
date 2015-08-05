@@ -7,7 +7,7 @@ def convertAngle( angle ):
 	return angle*200/180 + 50
 
 myCamera = Camera(prop_set={'width' : 640, 'height' : 480})
-delay = 5 # in s
+delay = 0.5 # in s
 angle = 0 # in degrees
 launchSpeed = 5 # in m/s
 g = 9.81 # in m/s^2
