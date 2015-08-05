@@ -13,9 +13,10 @@ while True:
 
 	pwmTime = convertAngle(angle)
 
-	echoString = "echo 2=" + pwmTime + " > /dev/servoblaster"
+	echoString = "echo 2=" + str(pwmTime) + " > /dev/servoblaster"
 
 	call(echoString)
 
 	angle = angle + 30
-	
+
+	sleep(delay)
