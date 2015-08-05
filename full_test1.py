@@ -11,6 +11,8 @@ myDisplay = Display(resolution=(640, 480))
 delay = 5 # s
 angle = 0 # degrees
 launchSpeed = 2 # m/s
+g = 9.81 # m/s^2
+h = 12 # cm
 
 while not myDisplay.isDone():
 	frame = myCamera.getImage().colorDistance(Color.RED)
@@ -29,15 +31,14 @@ while not myDisplay.isDone():
 
 	d2 = math.pow(distance,2)
 	v2 = math.pow(launchSpeed,2)
-	g = 9.81
-
-	angle = 180/math.pi * math.atan( distance + math.sqrt( d2 - 4*g*d2*(height+g*d2/(2*v2))/(2*v2) ) / (g*d2/v2) )
+	
+	angle = 180/math.pi * math.atan( distance + math.sqrt( d2 - 4*g*d2*(h+g*d2/(2*v2))/(2*v2) ) / (g*d2/v2) )
 
 	if angle > 89:
-		angle = angle = 180/math.pi * math.atan( distance - math.sqrt( d2 - 4*g*d2*(height+g*d2/(2*v2))/(2*v2) ) / (g*d2/v2) )
+		angle = angle = 180/math.pi * math.atan( distance - math.sqrt( d2 - 4*g*d2*(h+g*d2/(2*v2))/(2*v2) ) / (g*d2/v2) )
 
 
-	print "optimal angle is " + str(angle) +" degrees"
+	print "optimal angle is " + str(angle) + " degrees"
 
 	pwmTime = convertAngle(angle)
 
