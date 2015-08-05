@@ -15,7 +15,7 @@ while True:
 
 	echoString = "echo 2=" + str(pwmTime) + " > /dev/servoblaster"
 
-	call(echoString)
+	call([echoString],shell=True)
 
 	angle = angle + 30
 
