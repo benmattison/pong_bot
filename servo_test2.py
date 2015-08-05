@@ -8,7 +8,7 @@ delay = 1
 angle = 0
 
 while True:
-	if angle > 180:
+	if angle > 150:
 		angle = 0
 
 	pwmTime = convertAngle(angle)
@@ -17,6 +17,6 @@ while True:
 
 	call([echoString],shell=True)
 
-	angle = angle + 30
+	angle = angle + 20
 
 	sleep(delay)
